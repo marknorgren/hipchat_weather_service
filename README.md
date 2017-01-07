@@ -18,6 +18,8 @@ In the config folder add your Wunderground API key, HipChat Room ID, and token t
 
 ## To run locally
 
+Run `npm install` to install dependencies
+
 Run `node index.js`. This will start the service locally
 
 
