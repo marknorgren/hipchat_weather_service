@@ -3,17 +3,19 @@
 
 This weather service has a GET and POST route.
 
-The POST route is setup to recieve a POST from a HipChat room integration and responds with the Current Conditions
-as well as the Forecast.
+The POST route is setup to recieve a POST from a HipChat room integration and 
+responds with the Current Conditions as well as the Forecast.
 
 ## Setup
 
-You will need to get a [Wunderground API Key](https://www.wunderground.com/weather/api/)
+You will need to get a 
+[Wunderground API Key](https://www.wunderground.com/weather/api/)
 
 
 ## Add your config info
 
-In the config folder add your Wunderground API key, HipChat Room ID, and token to a new file called `development.js`
+In the config folder add your Wunderground API key, HipChat Room ID, and token 
+to a new file called `development.js`
 
 
 ## To run locally
