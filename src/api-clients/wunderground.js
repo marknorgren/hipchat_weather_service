@@ -29,12 +29,14 @@ function fetchForecast (query) {
       }
 
       let responseJson = JSON.parse(response);
+      //console.log("RESPONSE: ", JSON.stringify(responseJson, null, 2));
       let hourlyForecast = responseJson.hourly_forecast;
 
       let forecast = hourlyForecast
         .filter((forecast, idx) => idx < 5)
         .map((hour) => ({
           time: hour.FCTTIME.pretty,
+          condition: hour.condition,
           temp: hour.temp.english,
           feelsLike: hour.feelslike.english,
           wind: hour.wspd.english,

@@ -7,9 +7,11 @@ const weatherTemplate = require("../templates/weather");
 
 function conditionsPostHandler (request, response) {
   let { query } = url.parse(request.url);
-  let roomId = request.body.item.room.id;
-  console.log("conditionsPostHandler: ", query);
+  
+  let requestBody = request.body;
+  console.log("requestBody: ", JSON.stringify(requestBody, null, 2);
 
+  let roomId = request.body.item.room.id;
   Promise.all([fetchConditions(query), fetchForecast(query)])
     .then((results) => handleFetchSuccess(results, roomId), handleFetchFailure)
     .then(() => response.end());
