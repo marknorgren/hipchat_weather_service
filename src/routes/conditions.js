@@ -9,7 +9,7 @@ function conditionsPostHandler (request, response) {
   let { query } = url.parse(request.url);
   
   let requestBody = request.body;
-  console.log("requestBody: ", JSON.stringify(requestBody, null, 2);
+  console.log("requestBody: ", JSON.stringify(requestBody, null, 2));
 
   let roomId = request.body.item.room.id;
   Promise.all([fetchConditions(query), fetchForecast(query)])
