@@ -1,11 +1,10 @@
 module.exports = function hourly (forecast) {
   return `
     <li>
-      Time: ${forecast.time} <br>
-      Temp: ${forecast.temp}˚F <br>
-      Feels Like: ${forecast.feelsLike}˚F <br>
-      Wind: ${forecast.wind}mph <br>
-      POP: ${forecast.pop}% <br>
+      ${forecast.time} <br>
+      ${forecast.condition} <br>
+      <b>${forecast.temp}˚F</b>, Feels Like: ${forecast.feelsLike}˚F <br>
+      Wind: ${forecast.wind}mph, PoP: ${forecast.pop}% <br>
     </li>
   `;
 };
